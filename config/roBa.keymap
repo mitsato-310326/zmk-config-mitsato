@@ -28,15 +28,6 @@
     // };
 };
 
-/ {
-    trackball_listener {
-        status = "okay";
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        input-processors = <&zip_xy_scaler (-1) (-1)>;
-    };
-};
-
 &mkp_input_listener { input-processors = <&zip_temp_layer 2 250>; };
 
 / {
@@ -54,7 +45,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_UP_DOWN";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
             tap-ms = <20>;
         };
@@ -63,7 +54,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <20>;
         };
