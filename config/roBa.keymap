@@ -26,7 +26,9 @@
     //     wait-ms = <5>;
     //     tap-ms = <5>;
     // };
+};
 
+&trackball_input_listener {
     input-processors = <&zip_xy_scaler (-1) (-1)>;
 };
 
