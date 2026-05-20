@@ -27,8 +27,7 @@
     //     tap-ms = <5>;
     // };
 
-    invert-x;
-    invert-y;
+    input-processors = <&zip_xy_scaler (-1) (-1)>;
 };
 
 &mkp_input_listener { input-processors = <&zip_temp_layer 2 250>; };
