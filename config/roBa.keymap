@@ -26,6 +26,9 @@
     //     wait-ms = <5>;
     //     tap-ms = <5>;
     // };
+
+    invert-x;
+    invert-y;
 };
 
 &mkp_input_listener { input-processors = <&zip_temp_layer 2 250>; };
@@ -45,7 +48,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_UP_DOWN";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <20>;
         };
