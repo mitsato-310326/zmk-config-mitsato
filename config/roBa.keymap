@@ -28,8 +28,13 @@
     // };
 };
 
-&trackball_input_listener {
-    input-processors = <&zip_xy_scaler (-1) (-1)>;
+/ {
+    trackball_listener {
+        status = "okay";
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        input-processors = <&zip_xy_scaler (-1) (-1)>;
+    };
 };
 
 &mkp_input_listener { input-processors = <&zip_temp_layer 2 250>; };
