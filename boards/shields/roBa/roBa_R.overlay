@@ -29,6 +29,12 @@
         device = <&trackball>;
         // トラボ使用後1秒はカーソルレイヤーを有効に
         input-processors = <&zip_temp_layer 2 1000>;
+
+        // レイヤー8(&mo 8)を押している間だけ3倍速でトラックボールを動かす
+        fast_move {
+            layers = <8>;
+            input-processors = <&zip_xy_scaler 3 1>;
+        };
     };
 };
 
