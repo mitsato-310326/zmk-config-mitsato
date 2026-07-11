@@ -128,6 +128,13 @@
             bindings = <&bt BT_SEL 3 &tog 6>;
             label = "IPAD";
         };
+
+        bt4_setup: bt4_setup {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4 &tog 0>;
+            label = "BT4_SETUP";
+        };
     };
 
     keymap {
@@ -177,10 +184,10 @@
 
         bluetooth {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &win_setup  &mac_setup  &syayou  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &trans      &trans   &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &trans      &trans   &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                         &trans
+&trans  &trans  &trans  &trans  &trans                      &win_setup    &mac_setup    &syayou       &ipad         &bt4_setup
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                  &trans
             >;
         };
 
