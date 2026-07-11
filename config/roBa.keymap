@@ -106,7 +106,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
 
         equel: equel {
@@ -226,7 +225,7 @@
 &kp Q           &kp W         &kp E             &kp R                    &kp T                                      &kp Y        &kp U  &st 5 I    &kp O    &kp P
 &kp A           &kp S         &kp D             &kp F                    &kp G        &mkp MCLK      &semi          &kp H        &kp J  &kp K      &kp L    &minus
 &kp Z           &kp X         &kp C             &kp V                    &lt 4 B      &mo 8          &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &equel
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 2 SPACE  &kp TAB        &kp BACKSPACE  &lt 0 ENTER                             &kp LG(LS(S))
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 2 SPACE  &kp TAB        &kp BACKSPACE  &lt 7 ENTER                             &kp LG(LS(S))
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
