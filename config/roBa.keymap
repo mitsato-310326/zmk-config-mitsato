@@ -89,6 +89,15 @@
             flavor = "balanced";
             hold-while-undecided;
         };
+
+        semi: semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEMI";
+            bindings = <&kp SEMI>, <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -187,7 +196,7 @@
         default_layer_winjis {
             bindings = <
 &kp Q           &kp W         &kp E             &kp R                    &kp T                                      &kp Y        &kp U  &st 5 I    &kp O    &kp P
-&kp A           &kp S         &kp D             &kp F                    &kp G        &mkp MCLK      &kp SEMICOLON  &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp A           &kp S         &kp D             &kp F                    &kp G        &mkp MCLK      &semi          &kp H        &kp J  &kp K      &kp L    &kp MINUS
 &kp Z           &kp X         &kp C             &kp V                    &lt 4 B      &mo 8          &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp EQUAL
 &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 2 SPACE  &kp TAB        &kp BACKSPACE  &lt 7 ENTER                             &kp LG(LS(S))
             >;
@@ -198,15 +207,17 @@
         numberjis {
             // JIS(日本語)キーボード設定のOS上で、US配列前提のHIDキーコードが
             // 物理位置ベースで別の記号に化けてしまう分だけ、狙った記号が出るキーコードに置換
+
             bindings = <
-&kp LS(N7)           &kp N7        &kp N8        &kp N9          &kp LS(N8)                                 &kp LS(N9)             &none               &none               &none                &trans
-&kp LS(LEFT_BRACKET) &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp RIGHT_BRACKET     &none       &trans  &kp BACKSLASH          &none               &kp LS(UP_ARROW)    &none                &trans
-&kp INT1             &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp LS(RIGHT_BRACKET) &none       &trans  &kp LS(BACKSLASH)      &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &trans
-&trans               &kp N0        &trans        &kp LANGUAGE_1  &trans                &trans      &trans  &trans                                                                              &trans
+&kp LS(N7)            &kp N7        &kp N8        &kp N9          &kp LS(N8)                                 &kp LS(N9)         &none               &none               &none                &trans
+&kp LS(LEFT_BRACKET)  &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp RIGHT_BRACKET      &none       &trans  &kp BACKSLASH      &none               &kp LS(UP_ARROW)    &none                &trans
+&kp INT1              &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp LS(RIGHT_BRACKET)  &none       &trans  &kp LS(BACKSLASH)  &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &trans
+&trans                &kp N0        &trans        &kp LANGUAGE_1  &trans                 &trans      &trans  &trans                                                                          &trans
             >;
         };
 
         // &mo 8 を押している間だけトラックボールを高速化するレイヤー(roBa_R.overlayのfast_moveオーバーライドで参照)
+
         trackball_speed {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
