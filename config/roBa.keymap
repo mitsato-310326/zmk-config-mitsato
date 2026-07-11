@@ -135,10 +135,10 @@
 
         default_layer_mac {
             bindings = <
-&kp Q           &kp W         &kp E             &kp R                    &kp T                                      &kp Y        &kp U  &st 5 I    &kp O    &kp P
-&mt LCTRL A     &kp S         &kp D             &kp F                    &kp G        &mkp MCLK      &kp SEMICOLON  &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&kp Z           &kp X         &kp C             &kp V                    &lt 4 B      &mo 8          &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp EQUAL
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 2 SPACE  &kp TAB        &kp BACKSPACE  &lt 3 ENTER                             &kp LG(LS(N5))
+&kp Q           &kp W         &kp E             &kp R                    &kp T                                               &kp Y        &kp U  &st 5 I    &kp O    &kp P
+&mt LCTRL A     &kp S         &kp D             &kp F                    &kp G        &mkp MCLK               &kp SEMICOLON  &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp Z           &kp X         &kp C             &kp V                    &lt 4 B      &lt 8 LS(KP_ENTER)      &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp EQUAL
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 2 SPACE  &kp TAB                 &kp BACKSPACE  &lt 3 ENTER                             &kp LG(LS(N5))
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -146,10 +146,10 @@
 
         default_layer_win {
             bindings = <
-&kp Q           &kp W         &kp E             &kp R                    &kp T                                      &kp Y        &kp U  &st 5 I    &kp O    &kp P
-&kp A           &kp S         &kp D             &kp F                    &kp G        &mkp MCLK      &kp SEMICOLON  &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&kp Z           &kp X         &kp C             &kp V                    &lt 4 B      &mo 8          &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp EQUAL
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 2 SPACE  &kp TAB        &kp BACKSPACE  &lt 3 ENTER                             &kp LG(LS(S))
+&kp Q           &kp W         &kp E             &kp R                    &kp T                                               &kp Y        &kp U  &st 5 I    &kp O    &kp P
+&kp A           &kp S         &kp D             &kp F                    &kp G        &mkp MCLK               &kp SEMICOLON  &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp Z           &kp X         &kp C             &kp V                    &lt 4 B      &lt 8 LS(KP_ENTER)      &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp EQUAL
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 2 SPACE  &kp TAB                 &kp BACKSPACE  &lt 3 ENTER                             &kp LG(LS(S))
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -195,10 +195,10 @@
 
         default_layer_winjis {
             bindings = <
-&kp Q           &kp W         &kp E             &kp R                    &kp T                                      &kp Y        &kp U  &st 5 I    &kp O    &kp P
-&kp A           &kp S         &kp D             &kp F                    &kp G        &mkp MCLK      &semi          &kp H        &kp J  &kp K      &kp L    &minus
-&kp Z           &kp X         &kp C             &kp V                    &lt 4 B      &mo 8          &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &equel
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 2 SPACE  &kp TAB        &kp BACKSPACE  &lt 7 ENTER                             &kp LG(LS(S))
+&kp Q           &kp W         &kp E             &kp R                    &kp T                                               &kp Y        &kp U  &st 5 I    &kp O    &kp P
+&kp A           &kp S         &kp D             &kp F                    &kp G        &mkp MCLK               &semi          &kp H        &kp J  &kp K      &kp L    &minus
+&kp Z           &kp X         &kp C             &kp V                    &lt 4 B      &lt 8 LS(KP_ENTER)      &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &equel
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 2 SPACE  &kp TAB                 &kp BACKSPACE  &lt 7 ENTER                             &kp LG(LS(S))
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
