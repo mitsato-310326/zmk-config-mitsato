@@ -104,7 +104,7 @@
         mac_setup: osx_setup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &tog 6>;
+            bindings = <&bt BT_SEL 1 &tog 0>;
             label = "OSX_SETUP";
         };
 
@@ -177,10 +177,10 @@
 
         bluetooth {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &win_setup  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                &trans
+&trans  &trans  &trans  &trans  &trans                      &win_setup  &mac_setup  &syayou  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &trans      &trans   &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &trans      &trans   &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                         &trans
             >;
         };
 
