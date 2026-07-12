@@ -88,7 +88,7 @@
         singleq: singleq {
             compatible = "zmk,behavior-mod-morph";
             label = "SINGLEQ";
-            bindings = <&kp LS(LBKT)>, <&kp LS(EQUAL)>;
+            bindings = <&kp LS(N7)>, <&kp LS(N2)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -197,7 +197,7 @@
             bindings = <
 &kp Q           &kp W         &kp E             &kp R                    &kp T                                               &kp Y        &kp U  &st 6 I    &kp O    &kp P
 &kp A           &kp S         &kp D             &kp F                    &kp G        &mkp MCLK               &semi          &kp H        &kp J  &kp K      &kp L    &minus
-&kp Z           &kp X         &kp C             &kp V                    &lt 8 B      &lt 7 LS(KP_ENTER)      &kp INT_YEN    &kp N        &kp M  &kp COMMA  &kp DOT  &equel
+&kp Z           &kp X         &kp C             &kp V                    &lt 8 B      &lt 7 LS(KP_ENTER)      &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &equel
 &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 5 SPACE  &kp TAB                 &kp BACKSPACE  &lt 4 ENTER                             &kp LG(LS(S))
             >;
 
@@ -226,10 +226,10 @@
 
         numberjis {
             bindings = <
-&singleq  &jis7         &jis8   &jis9           &kp LS(N8)                           &kp LPAR      &none               &none               &none                &trans
-&singleq  &kp NUMBER_4  &kp N5  &jis6           &kp RBKT         &none       &trans  &kp BSLH      &none               &kp LS(UP_ARROW)    &none                &trans
-&kp INT3  &kp NUMBER_1  &jis2   &kp NUMBER_3    &kp RIGHT_BRACE  &none       &trans  &kp LS(BSLH)  &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &trans
-&trans    &jis0         &trans  &kp LANGUAGE_1  &trans           &trans      &trans  &trans                                                                     &trans
+&singleq     &jis7         &jis8   &jis9           &kp LS(N8)                           &kp LPAR      &none               &none               &none                &trans
+&singleq     &kp NUMBER_4  &kp N5  &jis6           &kp RBKT         &none       &trans  &kp BSLH      &none               &kp LS(UP_ARROW)    &none                &trans
+&kp INT_YEN  &kp NUMBER_1  &jis2   &kp NUMBER_3    &kp RIGHT_BRACE  &none       &trans  &kp LS(BSLH)  &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &trans
+&trans       &jis0         &trans  &kp LANGUAGE_1  &trans           &trans      &trans  &trans                                                                     &trans
             >;
         };
 
