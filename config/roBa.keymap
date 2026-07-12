@@ -70,7 +70,7 @@
         minus: minus {
             compatible = "zmk,behavior-mod-morph";
             label = "MINUS";
-            bindings = <&kp KP_MINUS>, <&kp LS(INT_YEN)>;
+            bindings = <&kp KP_MINUS>, <&kp LS(INT1)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -147,6 +147,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        jisquate: jisquate {
+            compatible = "zmk,behavior-mod-morph";
+            label = "JISQUATE";
+            bindings = <&kp LBRC>, <&kp LS(EQUAL)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -160,7 +169,7 @@
         win_setup: win_setup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &tog 1>;
+            bindings = <&bt BT_SEL 0 &tog 0>;
             label = "WIN_SETUP";
         };
 
@@ -227,7 +236,7 @@
         numberjis {
             bindings = <
 &singleq     &jis7         &jis8   &jis9           &kp LS(N8)                           &kp LPAR      &none               &none               &none                &trans
-&singleq     &kp NUMBER_4  &kp N5  &jis6           &kp RBKT         &none       &trans  &kp BSLH      &none               &kp LS(UP_ARROW)    &none                &trans
+&jisquate    &kp NUMBER_4  &kp N5  &jis6           &kp RBKT         &none       &trans  &kp BSLH      &none               &kp LS(UP_ARROW)    &none                &trans
 &kp INT_YEN  &kp NUMBER_1  &jis2   &kp NUMBER_3    &kp RIGHT_BRACE  &none       &trans  &kp LS(BSLH)  &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &trans
 &trans       &jis0         &trans  &kp LANGUAGE_1  &trans           &trans      &trans  &trans                                                                     &trans
             >;
