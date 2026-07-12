@@ -70,7 +70,7 @@
         minus: minus {
             compatible = "zmk,behavior-mod-morph";
             label = "MINUS";
-            bindings = <&kp KP_MINUS>, <&kp LS(BACKSLASH)>;
+            bindings = <&kp KP_MINUS>, <&kp LS(INT_YEN)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -89,6 +89,60 @@
             compatible = "zmk,behavior-mod-morph";
             label = "SINGLEQ";
             bindings = <&kp LS(LBKT)>, <&kp LS(EQUAL)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        jis0: jis0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "JIS0";
+            bindings = <&kp N0>, <&kp LS(N9)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        jis2: jis2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "JIS2";
+            bindings = <&kp N2>, <&kp LBKT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        jis6: jis6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "JIS6";
+            bindings = <&kp N6>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        jis7: jis7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "JIS7";
+            bindings = <&kp N7>, <&kp LS(N6)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        jis8: jis8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "JIS8";
+            bindings = <&kp N8>, <&kp LS(SINGLE_QUOTE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        jis9: jis9 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "JIS9";
+            bindings = <&kp N9>, <&kp LS(N8)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -143,7 +197,7 @@
             bindings = <
 &kp Q           &kp W         &kp E             &kp R                    &kp T                                               &kp Y        &kp U  &st 6 I    &kp O    &kp P
 &kp A           &kp S         &kp D             &kp F                    &kp G        &mkp MCLK               &semi          &kp H        &kp J  &kp K      &kp L    &minus
-&kp Z           &kp X         &kp C             &kp V                    &lt 8 B      &lt 7 LS(KP_ENTER)      &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &equel
+&kp Z           &kp X         &kp C             &kp V                    &lt 8 B      &lt 7 LS(KP_ENTER)      &kp INT_YEN    &kp N        &kp M  &kp COMMA  &kp DOT  &equel
 &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 5 SPACE  &kp TAB                 &kp BACKSPACE  &lt 4 ENTER                             &kp LG(LS(S))
             >;
 
@@ -172,10 +226,10 @@
 
         numberjis {
             bindings = <
-&kp SQT        &kp N7        &kp N8        &kp N9          &kp LEFT_PARENTHESIS                      &kp RIGHT_PARENTHESIS  &none               &none               &none                &trans
-&singleq       &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp LEFT_BRACKET      &none       &trans  &kp RIGHT_BRACKET      &none               &kp LS(UP_ARROW)    &none                &trans
-&kp BACKSLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp LEFT_BRACE        &none       &trans  &kp RIGHT_BRACE        &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &trans
-&trans         &kp N0        &trans        &kp LANGUAGE_1  &trans                &trans      &trans  &trans                                                                              &trans
+&singleq  &jis7         &jis8   &jis9           &kp LS(N8)                           &kp LPAR      &none               &none               &none                &trans
+&singleq  &kp NUMBER_4  &kp N5  &jis6           &kp RBKT         &none       &trans  &kp BSLH      &none               &kp LS(UP_ARROW)    &none                &trans
+&kp INT3  &kp NUMBER_1  &jis2   &kp NUMBER_3    &kp RIGHT_BRACE  &none       &trans  &kp LS(BSLH)  &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &trans
+&trans    &jis0         &trans  &kp LANGUAGE_1  &trans           &trans      &trans  &trans                                                                     &trans
             >;
         };
 
