@@ -104,28 +104,28 @@
         mac_setup: osx_setup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &tog 0>;
+            bindings = <&bt BT_SEL 1 &tog 2>;
             label = "OSX_SETUP";
         };
 
         win_setup: win_setup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &tog 1>;
+            bindings = <&bt BT_SEL 0 &tog 0>;
             label = "WIN_SETUP";
         };
 
         syayou: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &tog 6>;
+            bindings = <&bt BT_SEL 2 &tog 1>;
             label = "NEW_MACRO";
         };
 
         ipad: ipad {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3 &tog 0>;
+            bindings = <&bt BT_SEL 3 &tog 2>;
             label = "IPAD";
         };
     };
@@ -133,34 +133,34 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer_mac {
-            bindings = <
-&kp Q           &kp W         &kp E             &kp R                    &kp T                                               &kp Y        &kp U  &st 5 I    &kp O    &kp P
-&mt LCTRL A     &kp S         &kp D             &kp F                    &kp G        &mkp MCLK               &kp SEMICOLON  &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&kp Z           &kp X         &kp C             &kp V                    &lt 4 B      &lt 8 LS(KP_ENTER)      &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp EQUAL
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 2 SPACE  &kp TAB                 &kp BACKSPACE  &lt 3 ENTER                             &kp LG(LS(N5))
-            >;
-
-            sensor-bindings = <&encoder_msc_down_up>;
-        };
-
         default_layer_win {
             bindings = <
-&kp Q           &kp W         &kp E             &kp R                    &kp T                                               &kp Y        &kp U  &st 5 I    &kp O    &kp P
+&kp Q           &kp W         &kp E             &kp R                    &kp T                                               &kp Y        &kp U  &st 6 I    &kp O    &kp P
 &kp A           &kp S         &kp D             &kp F                    &kp G        &mkp MCLK               &kp SEMICOLON  &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&kp Z           &kp X         &kp C             &kp V                    &lt 4 B      &lt 8 LS(KP_ENTER)      &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp EQUAL
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 2 SPACE  &kp TAB                 &kp BACKSPACE  &lt 3 ENTER                             &kp LG(LS(S))
+&kp Z           &kp X         &kp C             &kp V                    &lt 8 B      &lt 7 LS(KP_ENTER)      &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp EQUAL
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 5 SPACE  &kp TAB                 &kp BACKSPACE  &lt 3 ENTER                             &kp LG(LS(S))
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
-        cursor {
+        default_layer_winjis {
             bindings = <
-&kp ESCAPE  &trans              &trans            &trans         &trans                            &trans  &trans     &mkp MCLK       &trans     &kp F12
-&trans      &trans              &kp LC(UP_ARROW)  &trans         &trans  &trans            &trans  &trans  &mkp LCLK  &kp UP_ARROW    &mkp RCLK  &trans
-&trans      &kp LC(LEFT_ARROW)  &kp LC(DOWN)      &kp LC(RIGHT)  &trans  &kp CAPSLOCK      &trans  &trans  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &trans
-&trans      &trans              &trans            &trans         &trans  &trans            &trans  &trans                                        &trans
+&kp Q           &kp W         &kp E             &kp R                    &kp T                                               &kp Y        &kp U  &st 6 I    &kp O    &kp P
+&kp A           &kp S         &kp D             &kp F                    &kp G        &mkp MCLK               &semi          &kp H        &kp J  &kp K      &kp L    &minus
+&kp Z           &kp X         &kp C             &kp V                    &lt 8 B      &lt 7 LS(KP_ENTER)      &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &equel
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 5 SPACE  &kp TAB                 &kp BACKSPACE  &lt 4 ENTER                             &kp LG(LS(S))
+            >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
+        };
+
+        default_layer_mac {
+            bindings = <
+&kp Q           &kp W         &kp E             &kp R                    &kp T                                               &kp Y        &kp U  &st 6 I    &kp O    &kp P
+&mt LCTRL A     &kp S         &kp D             &kp F                    &kp G        &mkp MCLK               &kp SEMICOLON  &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp Z           &kp X         &kp C             &kp V                    &lt 8 B      &lt 7 LS(KP_ENTER)      &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp EQUAL
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 5 SPACE  &kp TAB                 &kp BACKSPACE  &lt 3 ENTER                             &kp LG(LS(N5))
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -175,13 +175,24 @@
             >;
         };
 
-        bluetooth {
+        numberjis {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &win_setup  &mac_setup  &syayou  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &trans      &trans   &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &trans      &trans   &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                         &trans
+&kp SQT        &kp N7        &kp N8        &kp N9          &kp LEFT_PARENTHESIS                      &kp RIGHT_PARENTHESIS  &none               &none               &none                &trans
+&singleq       &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp LEFT_BRACKET      &none       &trans  &kp RIGHT_BRACKET      &none               &kp LS(UP_ARROW)    &none                &trans
+&kp BACKSLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp LEFT_BRACE        &none       &trans  &kp RIGHT_BRACE        &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &trans
+&trans         &kp N0        &trans        &kp LANGUAGE_1  &trans                &trans      &trans  &trans                                                                              &trans
             >;
+        };
+
+        cursor {
+            bindings = <
+&kp ESCAPE  &trans              &trans            &trans         &trans                            &trans  &trans     &mkp MCLK       &trans     &kp F12
+&trans      &trans              &kp LC(UP_ARROW)  &trans         &trans  &trans            &trans  &trans  &mkp LCLK  &kp UP_ARROW    &mkp RCLK  &trans
+&trans      &kp LC(LEFT_ARROW)  &kp LC(DOWN)      &kp LC(RIGHT)  &trans  &kp CAPSLOCK      &trans  &trans  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &trans
+&trans      &trans              &trans            &trans         &trans  &trans            &trans  &trans                                        &trans
+            >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         auto_mause_layer {
@@ -193,32 +204,21 @@
             >;
         };
 
-        default_layer_winjis {
-            bindings = <
-&kp Q           &kp W         &kp E             &kp R                    &kp T                                               &kp Y        &kp U  &st 5 I    &kp O    &kp P
-&kp A           &kp S         &kp D             &kp F                    &kp G        &mkp MCLK               &semi          &kp H        &kp J  &kp K      &kp L    &minus
-&kp Z           &kp X         &kp C             &kp V                    &lt 4 B      &lt 8 LS(KP_ENTER)      &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &equel
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 2 SPACE  &kp TAB                 &kp BACKSPACE  &lt 7 ENTER                             &kp LG(LS(S))
-            >;
-
-            sensor-bindings = <&encoder_msc_down_up>;
-        };
-
-        numberjis {
-            bindings = <
-&kp SQT        &kp N7        &kp N8        &kp N9          &kp LEFT_PARENTHESIS                      &kp RIGHT_PARENTHESIS  &none               &none               &none                &trans
-&singleq       &kp NUMBER_4  &kp N5        &kp NUMBER_6    &kp LEFT_BRACKET      &none       &trans  &kp RIGHT_BRACKET      &none               &kp LS(UP_ARROW)    &none                &trans
-&kp BACKSLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp LEFT_BRACE        &none       &trans  &kp RIGHT_BRACE        &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &trans
-&trans         &kp N0        &trans        &kp LANGUAGE_1  &trans                &trans      &trans  &trans                                                                              &trans
-            >;
-        };
-
         trackball_speed {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        bluetooth {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &win_setup  &mac_setup  &syayou  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &trans      &trans   &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &trans      &trans   &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                         &trans
             >;
         };
     };
