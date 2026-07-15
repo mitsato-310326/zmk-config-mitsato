@@ -58,6 +58,26 @@
             hold-while-undecided;
         };
 
+        win_lang: win_lang {
+            compatible = "zmk,behavior-hold-tap";
+            label = "WIN_LANG";
+            bindings = <&kp>, <&lang_en>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            quick-tap-ms = <0>;
+        };
+
+        win_lang2: win_lang2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "WIN_LANG2";
+            bindings = <&kp>, <&lang_jp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            quick-tap-ms = <0>;
+        };
+
         semi: semi {
             compatible = "zmk,behavior-mod-morph";
             label = "SEMI";
@@ -159,6 +179,20 @@
     };
 
     macros {
+        lang_en: lang_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &tog 9>;
+            label = "LANG_EN";
+        };
+
+        lang_jp: lang_jp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_1 &tog 9>;
+            label = "LANG_JP";
+        };
+
         mac_setup: osx_setup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -196,7 +230,7 @@
 &kp Q           &kp W         &kp E             &kp R                    &kp T                                               &kp Y        &kp U  &st 6 I    &kp O    &kp P
 &kp A           &kp S         &kp D             &kp F                    &kp G        &mkp MCLK               &kp SEMICOLON  &kp H        &kp J  &kp K      &kp L    &kp MINUS
 &kp Z           &kp X         &kp C             &kp V                    &lt 8 B      &lt 7 LS(KP_ENTER)      &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp EQUAL
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 5 SPACE  &kp TAB                 &kp BACKSPACE  &lt 3 ENTER                             &kp LG(LS(S))
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &win_lang LEFT_GUI 0  &lt 5 SPACE  &kp TAB                 &kp BACKSPACE  &lt 3 ENTER                             &kp LG(LS(S))
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -207,7 +241,7 @@
 &kp Q           &kp W         &kp E             &kp R                    &kp T                                               &kp Y        &kp U  &st 6 I    &kp O    &kp P
 &kp A           &kp S         &kp D             &kp F                    &kp G        &mkp MCLK               &semi          &kp H        &kp J  &kp K      &kp L    &minus
 &kp Z           &kp X         &kp C             &kp V                    &lt 8 B      &lt 7 LS(KP_ENTER)      &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &equel
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 5 SPACE  &kp TAB                 &kp BACKSPACE  &lt 4 ENTER                             &kp LG(LS(S))
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &win_lang LEFT_GUI 0  &lt 5 SPACE  &kp TAB                 &kp BACKSPACE  &lt 4 ENTER                             &kp LG(LS(S))
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -218,7 +252,7 @@
 &kp Q           &kp W         &kp E             &kp R                    &kp T                                               &kp Y        &kp U  &st 6 I    &kp O    &kp P
 &mt LCTRL A     &kp S         &kp D             &kp F                    &kp G        &mkp MCLK               &kp SEMICOLON  &kp H        &kp J  &kp K      &kp L    &kp MINUS
 &kp Z           &kp X         &kp C             &kp V                    &lt 8 B      &lt 7 LS(KP_ENTER)      &kp SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp EQUAL
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 5 SPACE  &kp TAB                 &kp BACKSPACE  &lt 3 ENTER                             &kp LG(LS(N5))
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &win_lang LEFT_GUI 0  &lt 5 SPACE  &kp TAB                 &kp BACKSPACE  &lt 3 ENTER                             &kp LG(LS(N5))
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -277,6 +311,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &trans      &trans   &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &trans      &trans   &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                         &trans
+            >;
+        };
+
+        lang_toggle {
+            bindings = <
+&trans  &trans  &trans  &trans                &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans                &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &win_lang2 LEFT_GUI 0  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
