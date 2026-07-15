@@ -64,6 +64,7 @@
             bindings = <&kp>, <&lang_en>;
 
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
             quick-tap-ms = <0>;
         };
@@ -74,6 +75,7 @@
             bindings = <&kp>, <&lang_jp>;
 
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
             quick-tap-ms = <0>;
         };
