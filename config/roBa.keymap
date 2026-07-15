@@ -70,7 +70,7 @@
         minus: minus {
             compatible = "zmk,behavior-mod-morph";
             label = "MINUS";
-            bindings = <&kp KP_MINUS>, <&kp LS(INT1)>;
+            bindings = <&kp MINUS>, <&kp LS(INT1)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
